@@ -1,27 +1,28 @@
 //super class
-class Holiday {
-    constructor(destination, days){
-        this.destination = destination;
-        this.days = days;
+class Holiday{
+    constructor(destination,day){
+        this.destination =destination;
+        this.day = day;
     }
 
     info(){
-        alert(`${this.destination} will take ${this.days} days.`);
+        alert(`${this.destination} will take ${this.day} Days.`);
     }
 }
 
-//sub class
-class Expedition extends Holiday {
-    constructor(destination, days, gear) {
-        super(destination, days);
+// sub class
+
+class Expedition extends Holiday{
+    constructor(destination,day,gear){
+        super(destination,day);
         this.gear = gear;
     }
 
     info(){
         super.info();
-        alert(`Bring your ${this.gear.join(' and your ')}`);
+        alert(`Brinf Your ${this.gear.join(' and your ')}`);
     }
 }
 
-const tripWithGear = new Expedition('Semeru', 10, [Sunglasses, 'Flags', 'Camera']);
+const tripWithGear = new Expedition ('Semeru',10 , ['Sunglasess','Flags','Camera']);
 tripWithGear.info();
