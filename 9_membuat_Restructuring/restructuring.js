@@ -6,3 +6,5 @@ var pemainSepakbola = {
     }
 };
 pemainSepakbola.output();
+
+
